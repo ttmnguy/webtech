@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="index.css" rel="stylesheet">
+  <link rel="icon" href="https://static-00.iconduck.com/assets.00/phone-icon-780x1024-uhrbyy3p.png">
+  <title> Web shop </title>
+</head>
+
+<body>
+    <div class="mainContent">
+    
+        <div class="nav">
+            <nav>
+              <ul>
+                <li><a href="#telephone">Shop</a></li>
+                <li><a href="#secTable">Subscription</a></li>
+                <li><a href="#info">About</a></li>
+              </ul>
+            </nav>
+        </div>
+
+        <div class="shipping">
+            <p id="freeShip">Free shipping for all products over 150 € until February 1st</p>
+        </div>
+
+        <div class="title">
+            <h2>Phones </h2> 
+            <p id="phoneCount"></p>
+            
+        </div>
+
+
+        <div class="search-container">
+            <input type="text" placeholder="Search" id="searchInp" onfocus="this.value=''" />
+            <button type="button" onClick="searchPhone()" id="addPhoneButton">
+                <img src="search.png" alt="Search icon" width="20" height="20">
+            </button>
+        </div>  
+        
+
+
+    <div class="telephone" id="telephone">
+        <div class="phone 1" id="1">
+            <img src="https://images.ctfassets.net/iz15t1lxx44v/275gAdI0HuDXYbLsp5dklc/ae4f0a400aa63f7f1e07cfa5599f489d/iPhone_15_Pro_Max_Natural_Titanium_PDP_Image_Position-1__WWEN.png?" alt ="Picture of iPhone 15 pro max" class="mobile 1">
+            <p>Apple</p>
+            <h3 id="phone1">iPhone 15 Pro Max</h3>  
+        </div>
+        <div class="phone 2" id="2">
+            <img src="https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/list-image/phones/p40/p40-white.png" alt="Picture of P40 pro" class="mobile 2">
+            <p>Huawei</p>
+            <h3 id="phone2">Huawei P40 Pro </h3>
+        </div>
+        <div class="phone 3" id="3">
+            <img src ="https://images.ctfassets.net/iz15t1lxx44v/4Q26G0tpPwK8ag7bsqkPaC/e70f71f8bb61fbea56b6a0cd572f302e/Samsung-S22-Bora-Purple-1.png?" alt="Picture of Galaxy S22" class="mobile 3">
+            <p>Samsung</p>
+            <h3 id="phone3">Galaxy S22</h3>
+        </div>
+        <div class="phone 4" id="4">
+            <img src ="https://images.ctfassets.net/iz15t1lxx44v/em5ABrFIuprgABqq3Qm4z/f9c5a1312b497ae3d23475bf249580d6/iPhone_15_Pink_PDP_Image_Position-1__WWEN.png?" alt="Picture of iPhone 15" class="mobile 4">
+            <p>Apple</p>
+            <h3 id="phone4">iPhone 15</h3>
+        </div>
+        <div class="phone 5" id="5">
+            <img src ="https://images.ctfassets.net/iz15t1lxx44v/2qa7LaqmdJyCpKJkyLpLJ9/07ea1925407be52b006032d36e135bac/iPhone_15_Plus_Green_PDP_Image_Position-1__WWEN.png?" alt="Picture of iPhone 15 plus" class="mobile 5">
+            <p>Apple</p>
+            <h3 id="phone5">iPhone 15 Plus</h3>  
+        </div>
+        <div class="phone 6" id="6">
+            <img src ="https://images.ctfassets.net/iz15t1lxx44v/6apTxYghkk8wWjR5JXQrAZ/d81bfce78e3b54abefaca928ce8666fb/Galaxy_A34_Awesome_Violet_1.png?" alt="Picture of Galaxy A34" class="mobile 6">
+            <p>Samsung</p>
+            <h3 id="phone6">Galaxy A34</h3>
+        </div>
+
+        <!--dynamic entries-->
+        <div class="phoneContainer" id="phoneContainer"> </div>
+
+        <!--Input field with a form that sends the input to the server-->
+        <form id="newPhone">
+            <label for="brand">Brand:</label>
+            <input type="text" id="brand" required>
+
+            <label for="model">Model:</label>
+            <input type="text" id="model" required>
+
+            <label for="imageSrc">Image URL:</label>
+            <input type="text" id="imageSrc" name="imageSrc" required>
+
+            <button type="button" id="newBtn" onClick="addNewPhone()">Add Phone</button>
+
+        </form>
+    </div>
+
+    <!--Second table-->
+    <div id="secTable">
+        <h2>Mobile phone subscription</h2>
+        <p>
+          In need for a cheap, accessible mobile subscription?<br>
+          Dont worry, we will deliever your new phone with the subscription of your choice already installed!<br>
+          Buying a phone in our webshop allows us to offer you great deals for mobile subscription through our partners.<br>
+          Below you can see all the offers from our partners depending on which phone you buy, and which binding agreement you choose.<br>
+        </p>
+        </div>
+        <table class="tableClass" id = "tableSubs">
+        <h2> Monthly price</h2>
+        <thead>
+          <tr>
+            <th>Brands</th>
+            <th>T mobile</th>
+            <th>Tele 2</th>
+            <th>Mobiel</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="titleBrand">Apple</td>
+            <td title="T mobile">23 &euro;</td>
+            <td title="Tele 2">24 &euro;</td>
+            <td title="Mobiel">22 &euro;</td>
+          </tr>
+          <tr>
+            <td class="titleBrand">Samsung</td>
+            <td title="T mobile">23 &euro;</td>
+            <td title="Tele 2">22 &euro;</td>
+            <td title="Mobiel">20 &euro;</td>
+          </tr>
+          <tr>
+            <td class="titleBrand">Huawei</td>
+            <td title="T mobile">20 &euro;</td>
+            <td title="Tele 2">21 &euro;</td>
+            <td title="Mobiel">19 &euro;</td>
+          </tr>
+        </tbody>
+      </table>
+
+        <!--info list-->
+        <section>
+            <div id="info">
+              <h2> Phone description </h2>
+              <dl>
+                <dt>Iphone X</dt>
+                <dd class="infoPhoneClass">The iPhone X is a smartphone designed, developed, marketed, produced, and sold by Apple Inc. The 11th generation of the iPhone, it was available to pre-order on October 27, 2017, and was released on November 3, 2017. The iPhone X used a glass and stainless-steel form factor and "bezel-less" design, shrinking the bezels while not having a "chin", unlike many Android phones.</dd>
+    
+                <dt>Galaxy A22</dt>
+                <dd class="infoPhoneClass">The Samsung Galaxy A22 is a mid-range Android-based smartphone developed and manufactured by Samsung Electronics as a part of its Galaxy A series. The phone was first released on 24 June 2021. The phone comes with a triple rear camera setup and a 90 Hz display. The Samsung Galaxy A22 5G has a 6.6 inch Infinity-V display with a V-shaped notch at top. The frame and the back panel of the device is made of plastic. There is a side-mounted capacitive fingerprint reader at the right side and a triple rear camera setup with an LED flash at the back</dd>
+    
+                <dt>Huawei Y6p</dt>
+                <dd class="infoPhoneClass">The Huawei Y6p is an affordable smartphone produced by Huawei. Huawei Y6p is released in May 2020 and it comes in a dimension of 159.1 x 74.1 x 9 mm and weighs 185 grams. The screen type is IPS LCD capacitive touchscreen. The size of the screen is 6.3 inches and 720 x 1600 pixels providing 278 PPI density. The smartphone comes with a triple-camera on the rear side that consists of 13 MP (wide) + 5 MP (ultrawide) + 2 MP (depth). On the front, there is a single 8 MP (wide).</dd>
+              </dl>
+            </div>
+        </section>
+    </div>
+
+
+
+    <script src="index.js"></script>
+    <script>updateCounter();</script>
+
+</body>
+
+<footer>
+    <pre>
+    Contact us
+    Phone: +31 12345678
+    <a href="mailto:oslo@example.com" id=mail>oslo@example.com</a>
+    </pre>
+  </footer>
+
+</html>

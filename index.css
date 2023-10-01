@@ -1,0 +1,237 @@
+body {
+    width: 100%;
+    margin: 0px;
+}
+
+/*Responsive design*/
+@media
+  only screen
+  and (max-width: 768px)  {
+
+    body {
+      overflow: auto;
+    }
+
+  .tableClass table, thead, tbody, tr, th, td {
+    display: block;
+  }
+
+  .tableClass thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .tableClass td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .tableClass tr { border: 1px solid lightGray; }
+
+  /*row content*/
+  .tableClass td {
+  	position: relative;
+  	padding-left: 50%;
+  	white-space: normal;
+  	text-align:right;
+  }
+
+  /*titles*/
+  .tableClass td:before {
+  	position: absolute;
+  	top: 5px;
+  	left: 5px;
+    font-weight: bold;
+  	text-align:left;
+  }
+
+  .tableClass td:before { content: attr(title); }
+
+  #newPhone label {
+    display: block;
+  }
+
+  #newPhone input {
+    display: block;
+    width: 75%; 
+    box-sizing: border-box; 
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto; 
+  }
+
+} /*end of media*/
+
+.telephone {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+.title {
+  margin: -10px;
+}
+
+
+.phone {
+    display: inline-block;
+    vertical-align: top; 
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+
+h3, h2, p, label, dt, dd, pre {
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+
+pre {
+  letter-spacing: 2px;
+}
+
+dt {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+dd {
+  margin: 10px;
+}
+
+#info {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+.mobile {
+    width: 140px;
+    margin: 10px;
+  }
+
+.mobile:hover {
+    transform: scale(1.1);
+  }
+
+.mainContent {
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input {
+  padding: 7px 11px;
+  margin: 10px;
+}
+
+#secTable {
+  margin: 50px;
+}
+
+#newBtn, select {
+  cursor: pointer;
+  position: relative;
+  font-size: 14px;
+  padding: 7px 11px;
+  border: none;
+  background-color: #3341b5;
+  color: white;
+  font-weight: bold;
+  border-radius: 3px;
+  margin: 5px;
+}
+
+#addPhoneButton {
+  cursor: pointer;
+  position: relative;
+  padding: 5px 5px;
+  border: none;
+  margin: 5px;
+  background-color: white;
+}
+
+.shipping {
+  background-color: #333399;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+}
+
+#freeShip {
+  color: white;
+  font-size: 16px;
+}
+
+
+  /* Navigation bar in header*/
+.nav {
+    background-color: whitesmoke;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .nav li {
+    display: inline-block;
+  }
+  .nav li a {
+    display: block;
+    color: black;
+    padding: 12px 30px;
+    font-family: sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    height: 50px;
+  }
+  .nav li a:hover {
+    color: #3361f5;
+  }
+
+
+
+    /*Mobile subscription table*/
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 80%;
+      height: 200px;
+      margin: 20px;
+      margin-left: auto;
+      margin-right: auto; 
+      background-color: whitesmoke;
+    }
+    
+    td, th {
+      border: 2px solid white;
+      text-align: center;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #3341b5;
+      color: white;
+    }
+    
+  
+ footer {
+  text-align: center;
+  padding: 1px;
+  background-color: whitesmoke;
+  font-size: 15px;
+ }
