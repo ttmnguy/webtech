@@ -30,7 +30,7 @@ body {
 
   .tableClass tr { border: 1px solid lightGray; }
 
-  /*row content*/
+
   .tableClass td {
   	position: relative;
   	padding-left: 50%;
@@ -38,7 +38,7 @@ body {
   	text-align:right;
   }
 
-  /*titles*/
+
   .tableClass td:before {
   	position: absolute;
   	top: 5px;
